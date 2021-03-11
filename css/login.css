@@ -1,0 +1,21 @@
+.login-form{
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-top: 100px;
+}
+
+.login-page {
+  font-family: 'Redressed', cursive;
+  background-image: linear-gradient(to right,#32325d,#5e72e4,white);
+}
+
+#login-button{
+  margin-left: 300px;
+}
+
+.headings{
+  font-size: 100px;
+  margin-bottom: 200px;
+  margin-left: 350px;
+  margin-top: 50px;
+}
