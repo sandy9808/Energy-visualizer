@@ -1,0 +1,15 @@
+#upper{
+  height: 200px;
+  background-color: #32325d;
+  margin-bottom: 50px;
+}
+
+#lower{
+height: 500px;
+  background-color: white;
+}
+
+#profile{
+  margin-left: auto;
+  margin-right: auto;
+}
