@@ -1,15 +1,20 @@
-#upper{
-  height: 200px;
-  background-color: #32325d;
-  margin-bottom: 50px;
+.navbar-brand{
+  padding: 0;
+  margin: 0;
 }
-
-#lower{
-height: 500px;
-  background-color: white;
+.jumbotron{
+  margin-bottom: 0;
+  background-color:transparent ! important;
 }
-
-#profile{
+#main {
+  /* background-color: red; */
+  margin-bottom: 32px;
+  background: -moz-linear-gradient(top,  rgba(37,186,183,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(37,186,183,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(37,186,183,1) 0%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25bab7', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+}
+#profile {
   margin-left: auto;
   margin-right: auto;
 }

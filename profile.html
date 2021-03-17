@@ -1,93 +1,160 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Profile Page</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/profile.css">
-  </head>
-  <body>
+<head>
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+  <link rel="manifest" href="./images/site.webmanifest">
+  <meta charset="utf-8">
+  <title>Energy Visualizer| Profile Page</title>
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/profile.css">
+  <script src="https://kit.fontawesome.com/b90adf908b.js" crossorigin="anonymous"></script>
+</head>
 
-    <div class="container-fluid" id="upper">
-      <div class="row">
-        <div class="col-lg-7 col-md-10">
-          <h1 class="display-2 text-white">Hello Vasu</h1>
-          <a href="#!" class="btn btn-outline-warning">Edit profile</a>
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-light">
+    <a href="index.html" class="navbar-brand">
+      <img src="./images/logo.png" height="28" alt="Energy Visualizer" id="logo">
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav">
+        <a href="index.html" class="nav-item nav-link">Home</a>
+        <a href="#" class="nav-item nav-link">Profile</a>
+        <a href="#" class="nav-item nav-link">Graph</a>
+      </div>
+      <!-- <div class="navbar-nav ml-auto">
+        <a href="#" class="nav-item nav-link">Login</a>
+      </div> -->
+    </div>
+  </nav>
+  <!-- <div class="container" id="upper">
+    <div class="row">
+      <div class="col-lg-7 col-md-10">
+        <h1 class="display-2 text-white" id="hello">Hello Adityapratap</h1>
+        <a href="#!" class="btn btn-outline-warning">Edit profile</a>
+      </div>
+    </div>
+  </div> -->
+  <div class="container-fluid" id="main">
+    <div class="jumbotron">
+      <h1 class="display-4">Hello, FirstName!</h1>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Edit Profile</a>
+      </p>
+    </div>
+    <div class="container-fluid" id="lower">
+      <div class="col-xl-8 order-xl-1" id="profile">
+        <div class="card bg-secondary shadow">
+          <div class="card-header bg-white border-0">
+            <div class="row align-items-center">
+              <div class="col-8">
+                <h3 class="mb-0">Profile</h3>
+              </div>
+              <!-- <div class="col-4 text-right">
+                    <a href="#!" class="btn btn-sm btn-primary">Settings</a>
+                  </div> -->
+            </div>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="pl-lg-4">
+  
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group focused">
+                      <label class="form-control-label" for="input-username">Username</label>
+                      <input type="text" id="input-username" class="form-control form-control-alternative"
+                        placeholder="Username">
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group focused">
+                      <label class="form-control-label" for="input-first-name">First name</label>
+                      <input type="text" id="input-first-name" class="form-control form-control-alternative"
+                        placeholder="First name">
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group focused">
+                      <label class="form-control-label" for="input-first-name">Last name</label>
+                      <input type="text" id="input-first-name" class="form-control form-control-alternative"
+                        placeholder="Last name">
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="form-control-label" for="input-email">Email address</label>
+                      <input type="email" id="input-email" class="form-control form-control-alternative"
+                        placeholder="abc@example.com">
+                    </div>
+                  </div>
+                </div>
+  
+              </div>
+  
+            </form>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+  
+  <!-- footer -->
+  <footer style="background-color: #2c292f">
+    <div class="container">
+      <div class="row ">
+        <div class="col-md-4 text-center text-md-left ">
 
-    <div class="container-fluid" id="lower">
-      <div class="col-xl-8 order-xl-1" id="profile">
-          <div class="card bg-secondary shadow">
-            <div class="card-header bg-white border-0">
-              <div class="row align-items-center">
-                <div class="col-8">
-                  <h3 class="mb-0">Profile</h3>
-                </div>
-                <!--<div class="col-4 text-right">
-                  <a href="#!" class="btn btn-sm btn-primary">Settings</a>
-                </div>-->
-              </div>
-            </div>
-            <div class="card-body">
-              <form>
-                <h6 class="heading-small text-muted mb-4">User Information</h6>
-                <div class="pl-lg-4">
+          <div class="py-0">
+            <h3 class="my-4 text-white">Useful Links</h3>
 
+            <p class="footer-links font-weight-bold">
+              <a class="text-white" href="index.html">Home</a>
+              <!-- |
+              <a class="text-white" href="#">Contact</a> -->
+            </p>
+            <p class="text-light py-4 mb-4">&copy;2020 Energy Visualizer Pvt. Ltd.</p>
+          </div>
+        </div>
 
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="form-group focused">
-                        <label class="form-control-label" for="input-username">Username</label>
-                        <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="vasu@stud">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="form-group focused">
-                        <label class="form-control-label" for="input-first-name">First name</label>
-                        <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="Vasu">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="form-group focused">
-                        <label class="form-control-label" for="input-first-name">Last name</label>
-                        <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="Last name" value="don">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-email">Email address</label>
-                        <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="abc@example.com">
-                      </div>
-                    </div>
-                  </div>
-
-
-
-                </div>
-
-              </form>
+        <div class="col-md-4 text-white text-center text-md-left ">
+          <div class="py-2 my-4">
+            <h3 class="my-4 text-white">Contact us</h3>
+            <div>
+              <p><i class="fa fa-envelope  mx-2"></i><a href="mailto:support@eduonix.com">support@energyvis.com</a></p>
             </div>
           </div>
         </div>
 
-
-
+        <div class="col-md-4 text-white my-4 text-center text-md-left ">
+          <h3 class="my-4 text-white">About<span class="mx-2 font-italic text-warning ">Energy Visualizer</span></h3>
+          <p class="text-warning my-2">Energy Visualizer is an energy management system which makes the graph of the
+            data for a selected period of time compares the usage between usage and non usage hours.</p>
+        </div>
+      </div>
     </div>
+  </footer>
+  <!-- end of footer -->
 
+</body>
 
-
-  </body>
 </html>

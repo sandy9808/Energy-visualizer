@@ -8,40 +8,84 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
   <link rel="manifest" href="./images/site.webmanifest">
   <meta charset="utf-8">
-  <title>Energy Visualizer| About</title>
+  <title>Energy Visualizer| Login</title>
 
-  <meta name="keywords" content="Energy Visualizer">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/about.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/login.css">
   <script src="https://kit.fontawesome.com/b90adf908b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-md navbar-light">
-    <a href="#" class="navbar-brand">
+    <a href="index.html" class="navbar-brand">
       <img src="./images/logo.png" height="28" alt="Energy Visualizer" id="logo">
     </a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <div class="navbar-nav">
         <a href="index.html" class="nav-item nav-link">Home</a>
       </div>
-      <div class="navbar-nav ml-auto">
-        <a href="login.html" class="nav-item nav-link">Login</a>
-      </div>
     </div>
   </nav>
-  <div id="main" class="container-fluid">
-    <h1 class="h1 text-white" align="center">ABOUT ENERGY VISUALIZER</h1>
-    <hr size="5" noshade="" color="white">
-    <p id="content">Energy Visualizer is an energy management system which makes the graph of the data for a selected
-      period of time compares the usage between peak and non-peak hours.</p>
+
+  <div class="container-fluid" id="main">
+    <div class="headings">
+      <span style="color:black" class="display-2">ENERGY</span>
+      <span style="color:#32325d" class="display-2">VISUALIZER</span>
+      <br>
+    </div>
+
+    <div class="container" id="form">
+      <div class="row">
+        <div class="col-md-12 pt-32 pb-32 d-flex flex-column justify-content-center">
+          <div class="row">
+            <div class="col-lg-6 col-md-8 mx-auto">
+
+              <!-- form card login -->
+              <div class="card rounded shadow shadow-sm">
+                <div class="card-header">
+                  <h3 class="mb-0">Login</h3>
+                </div>
+                <div class="card-body">
+                  <form class="form" role="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+                    <div class="form-group">
+                      <label for="uname1">Username</label>
+                      <input type="text" class="form-control form-control-lg rounded-0" name="uname1" id="uname1"
+                        required="">
+                      <div class="invalid-feedback">Oops, you missed this one.</div>
+                    </div>
+                    <div class="form-group">
+                      <label>Password</label>
+                      <input type="password" class="form-control form-control-lg rounded-0" id="pwd1" required=""
+                        autocomplete="new-password">
+                      <div class="invalid-feedback">Enter your password too!</div>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">Login</button>
+                  </form>
+                </div>
+                <!--/card-block-->
+              </div>
+              <!-- /form card login -->
+
+            </div>
+
+
+          </div>
+          <!--/row-->
+
+        </div>
+        <!--/col-->
+      </div>
+      <!--/row-->
+    </div>
+    <!--/container-->
   </div>
+
   <!-- footer -->
   <footer style="background-color: #2c292f">
     <div class="container">
@@ -54,7 +98,7 @@
             <p class="footer-links font-weight-bold">
               <a class="text-white" href="index.html">Home</a>
               <!-- |
-              <a class="text-white" href="#">Contact</a> -->
+            <a class="text-white" href="#">Contact</a> -->
             </p>
             <p class="text-light py-4 mb-4">&copy;2020 Energy Visualizer Pvt. Ltd.</p>
           </div>
@@ -78,6 +122,7 @@
     </div>
   </footer>
   <!-- end of footer -->
+
 </body>
 
 </html>
