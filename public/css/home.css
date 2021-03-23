@@ -1,0 +1,390 @@
+/* default css start */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.containernav {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.header-area {
+  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.5)),
+  url("../images/ssssss.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+/* default css end */
+
+
+/* navbar regular css start */
+.navbar-area {
+  background: rgba(0,0,0,.6);
+  border-bottom: 1px solid #000;
+}
+.site-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a.site-logo {
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+.site-navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.site-navbar ul li a {
+  color: #fff;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.site-navbar ul li a:hover {
+  background: rgba(255,255,255,.1);
+}
+/* navbar regular css end */
+
+
+/* nav-toggler css start */
+.nav-toggler {
+  border: 3px solid #fff;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: none;
+}
+.nav-toggler span, 
+.nav-toggler span:before, 
+.nav-toggler span:after {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: .3s;
+}
+.nav-toggler span:before {
+  content: '';
+  transform: translateY(-9px);
+}
+.nav-toggler span:after {
+  content: '';
+  transform: translateY(6px);
+}
+.nav-toggler.toggler-open span {
+  background-color: transparent;
+}
+.nav-toggler.toggler-open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+.nav-toggler.toggler-open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
+/* nav-toggler css start */
+
+
+/* intro-area css start */
+.intro-area {
+  height: calc(100vh - 61px);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.intro-area h2 {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 50px;
+  margin-bottom: 25px;
+}
+.intro-area p {
+  font-size: 23px;
+}
+/* intro-area css end */
+
+
+/* mobile breakpoint start */
+@media screen and (max-width: 767px) {
+  .containernav {
+    max-width: 720px;
+  }
+  /* navbar css for mobile start */
+  .nav-toggler{
+    display: block;
+  }
+  .site-navbar {
+    min-height: 60px;
+  }
+  .site-navbar ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 60px);
+    left: 0;
+    top: 60px;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #444;
+    background-color: rgba(0,0,0,.75);
+    max-height: 0;
+    overflow: hidden;
+    transition: .3s;
+  }
+  .site-navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .site-navbar ul li a {
+    padding: 25px;
+  }
+  .site-navbar ul li a:hover {
+    background-color: rgba(255,255,255,.1);
+  }
+  .site-navbar ul.open {
+    max-height: 100vh;
+    overflow: visible;
+  }
+  .intro-area h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }  
+  /* navbar css for mobile end */
+}
+/* mobile breakpoint end */
+
+
+/* Footer section ! */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap');
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #232526;
+    color: white;
+    margin-top: 0px;
+    padding-top: 10pt;
+    padding-bottom: 0;
+    text-align: center;
+  }
+  .contact-text{
+      padding: 15px;
+  }
+  .social li {
+    display: inline-block;
+  }
+  
+  .social li a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 0.5em;
+    background: #fff;
+    color: black !important;
+    position: center;
+    display: block;
+    line-height: 1.5em;
+    text-decoration: none;
+  }
+  
+  .fa-2x {
+    font-size: 1.5em !important;
+  }
+  
+  .icon:hover {
+    transform: scale(1.2);
+    transition-duration: 0.2s;
+  }
+  
+  .social .fa-facebook:hover {
+    box-shadow: 0 0 2px 4px rgba(65, 103, 178, 0.4);
+  }
+  
+  .social .fa-twitter:hover {
+    box-shadow: 0 0 2px 4px rgba(29, 161, 242, 0.4);
+  }
+  .social .fa-linkedin:hover {
+    box-shadow: 0 0 2px 4px rgba(40, 103, 178, 0.4);
+  }
+  .social .fa-github:hover {
+    box-shadow: 0 0 2px 4px rgba(127, 71, 201, 0.4);
+  }
+  .social .fa-envelope:hover {
+    box-shadow: 0 0 2px 4px rgba(219, 68, 55, 0.4);
+  }
+  
+  .text-copyright {
+    background-color: #212326;
+    box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  @media screen and (max-width: 450px) {
+    .text-copyright {
+      display: block;
+      font-size: small;
+    }
+  }
+  
+  /* Footer Section Ends */
+
+
+ /* Home page code starts */
+  
+  
+  .slogan {
+    width: 0;
+    margin: 0 auto;
+    padding: 2px 0 0;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: "Courier New", monospace;
+    font-size: 32px;
+    font-weight: 300;
+    border-right: 6px solid #27ae60;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    -webkit-animation-name: blink-start, typing, blink-end;
+    -moz-animation-name: blink-start, typing, blink-end;
+    animation-name: blink-start, typing, blink-end;
+    -webkit-animation-duration: 1s, 1s, 1s;
+    -moz-animation-duration: 1s, 1s, 1s;
+    animation-duration: 1s, 1s, 1s;
+    -webkit-animation-timing-function: linear, steps(13, end), linear;
+    -moz-animation-timing-function: linear, steps(13, end), linear;
+    animation-timing-function: linear, steps(13, end), linear;
+    -webkit-animation-iteration-count: 1, 1, infinite;
+    -moz-animation-iteration-count: 1, 1, infinite;
+    animation-iteration-count: 1, 1, infinite;
+    -webkit-animation-delay: 0s, 1s, 2s;
+    -moz-animation-delay: 0s, 1s, 2s;
+    animation-delay: 0s, 1s, 2s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+  .slogan span {
+    display: block;
+    width: 260px;
+  }
+  
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 270px;
+    }
+  }
+  @-moz-keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 270px;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 270px;
+    }
+  }
+  @-webkit-keyframes blink-start {
+    from, to {
+      border-color: #27ae60;
+    }
+    50% {
+      border-color: transparent;
+    }
+  }
+  @-moz-keyframes blink-start {
+    from, to {
+      border-color: #27ae60;
+    }
+    50% {
+      border-color: transparent;
+    }
+  }
+  @keyframes blink-start {
+    from, to {
+      border-color: #27ae60;
+    }
+    50% {
+      border-color: transparent;
+    }
+  }
+  @-webkit-keyframes blink-end {
+    from, to {
+      border-color: #27ae60;
+    }
+    50% {
+      border-color: transparent;
+    }
+  }
+  @-moz-keyframes blink-end {
+    from, to {
+      border-color: #27ae60;
+    }
+    50% {
+      border-color: transparent;
+    }
+  }
+  @keyframes blink-end {
+    from, to {
+      border-color: #27ae60;
+    }
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+.containerheader {
+  font-family: 'Monteserrat';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerheader p {
+  font-size: 3rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+.containerheader p span.typed-text {
+  font-weight: normal;
+}
+.containerheader p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.container1 p span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
+
+/* Home page Code ends */
