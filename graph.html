@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="graph.css">
+  <script src="graph.js"></script>
+  <title></title>
+</head>
+
+<body>
+
+  <div class="user">
+    <header class="user__header">
+      <img src="images\logo.jpeg" alt="" height=100px/>
+      <h1 class="user__title">Select Data for its Graphical Representation</h1>
+    </header>
+
+    <form class="form">
+      <div class="form__group">
+        <input type="date" placeholder="Start Date :" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form__input"  onfocus="(this.type='date')"required />
+      </div>
+
+      <div class="form__group">
+        <input type="time" placeholder="Start Time :" type="text" onfocus="(this.type='time')" onblur="(this.type='text')" class="form__input" required/>
+      </div>
+
+      <div class="form__group">
+        <input type="date" placeholder="End Date :" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form__input" required/>
+      </div>
+
+      <div class="form__group">
+        <input type="time" placeholder="End Time :" type="text" onfocus="(this.type='time')" onblur="(this.type='text')" class="form__input" required/>
+      </div>
+
+      <button class="btn" type="button">Show Graph</button>
+    </form>
+  </div>
+</body>
+
+</html>
