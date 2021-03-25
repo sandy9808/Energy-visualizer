@@ -1,0 +1,13 @@
+/* intro-area css start */
+.chart-container {
+    height: calc(100vh - 61px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+
+h3{
+  color:#000066;
+}
+  /* intro-area css end */

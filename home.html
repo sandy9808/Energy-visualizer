@@ -12,7 +12,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
   <link rel="manifest" href="./images/site.webmanifest">
-  <link rel="stylesheet" type="text/css" href="/css/home.css" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+  <link rel="stylesheet" href="/css/home.css">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -21,9 +22,9 @@
 </head>
 
 <body class="font-serif">
-  <header class="header-area">
+  <header style="background-color: #5B21B6;">
     <!-- site-navbar start -->
-    <div class="navbar-area">
+    <div class="navbar-area bg-blue-200 bg-transparent">
       <div class="containernav">
         <nav class="site-navbar">
           <!-- site logo -->
@@ -33,10 +34,11 @@
 
           <!-- site menu/nav -->
           <ul>
-            <li><a href="#">Login</a></li>
+            <!-- <li><a href="#">Login</a></li> -->
             <li><a href="#">Home</a></li>
             <li><a href="#">Graph</a></li>
             <li><a href="#">Profile</a></li>
+            <li><a href="#">Log out</a></li>
           </ul>
 
           <!-- nav-toggler for mobile version only -->
@@ -51,14 +53,27 @@
       <!-- <div>
         <p class="slogan"><span>Save Electricity</span></p>
       </div> -->
-      
-      <div class="containerheader">
-        <p>Save <span class="typed-text text-green-700"></span><span class="cursor">&nbsp;</span></p>
+
+      <!-- <div class="containerheader">
+        <p>Save <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
       </div>
       <div class="text-2xl">
       Energy Visualizer is an energy management system which displays the graphical view of the electricity readings.
-      </div>
+      </div> -->
 
+      <div class="container-fluid">
+        <div class="row ">
+          <div class="col flex flex-col justify-center">
+            <img src="/images/ssssss.jpg" height="500px;">
+          </div>
+          <div class="col flex flex-col justify-center">
+            <br><br>
+            <p>Energy Visualizer</p><p>An energy management system</p>  <p>which displays the graphical view</p> <p>of the electricity readings.</p>
+            <br>
+            <button class="btn btn-primary btn-lg active">Visualize now</button>
+          </div>
+        </div>
+      </div>
 
     </div>
   </header>
@@ -128,7 +143,7 @@ function type() {
     typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
     charIndex++;
     setTimeout(type, typingDelay);
-  } 
+  }
   else {
     cursorSpan.classList.remove("typing");
     setTimeout(erase, newTextDelay);
@@ -141,7 +156,7 @@ function erase() {
     typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
     charIndex--;
     setTimeout(erase, erasingDelay);
-  } 
+  }
   else {
     cursorSpan.classList.remove("typing");
     textArrayIndex++;

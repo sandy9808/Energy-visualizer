@@ -7,17 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Energy Visualizer |Home</title>
-  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-  <link rel="manifest" href="./images/site.webmanifest">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="/image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="manifest" href="/images/site.webmanifest">
   <link rel="stylesheet" type="text/css" href="/css/main.css"/>
   <link rel="stylesheet" href="/css/graph.css">
 
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" -->
     <!-- integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-  <!-- <link href="css/tailwind.min.css" rel="stylesheet"> -->
+  <!-- <link href="/css/tailwind.min.css" rel="stylesheet"> -->
   <script src="https://kit.fontawesome.com/b90adf908b.js" crossorigin="anonymous"></script>
 </head>
 
@@ -28,17 +28,17 @@
       <div class="containernav">
         <nav class="site-navbar">
           <!-- site logo -->
-          <a href="#home" class="site-logo">
+          <a href="http://localhost:3000/home/<%=username%>" class="site-logo">
             <img src="/images/logo.png" alt="">
           </a>
 
           <!-- site menu/nav -->
           <ul>
             <!-- <li><a href="#">Login</a></li> -->
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Graph</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Log out</a></li>
+            <li><a href="http://localhost:3000/home/<%=username%>">Home</a></li>
+            <li><a href="http://localhost:3000/view/<%=username%>">Graph</a></li>
+            <li><a href="http://localhost:3000/profile/<%=username%>">Profile</a></li>
+            <li><a href="http://localhost:3000">Log out</a></li>
           </ul>
 
           <!-- nav-toggler for mobile version only -->
@@ -67,24 +67,24 @@
           <h1 class="user__title">Select Data for its Graphical Representation</h1>
         </header>
 
-        <form class="form">
+        <form class="form" method="post">
           <div class="form__group">
-            <input type="date" placeholder="Start Date :" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form__input"  onfocus="(this.type='date')"required />
+            <input type="date" placeholder="Start Date :" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form__input"  onfocus="(this.type='date')"required name="startDate" />
           </div>
 
           <div class="form__group">
-            <input type="time" placeholder="Start Time :" type="text" onfocus="(this.type='time')" onblur="(this.type='text')" class="form__input" required/>
+            <input type="time" placeholder="Start Time :" type="text" onfocus="(this.type='time')" onblur="(this.type='text')" class="form__input" required name="startTime"/>
           </div>
 
           <div class="form__group">
-            <input type="date" placeholder="End Date :" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form__input" required/>
+            <input type="date" placeholder="End Date :" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form__input" required name="endDate"/>
           </div>
 
           <div class="form__group">
-            <input type="time" placeholder="End Time :" type="text" onfocus="(this.type='time')" onblur="(this.type='text')" class="form__input" required/>
+            <input type="time" placeholder="End Time :" type="text" onfocus="(this.type='time')" onblur="(this.type='text')" class="form__input" required name="endTime"/>
           </div>
 
-          <button class="btn" type="button">Show Graph</button>
+          <button class="btn" type="submit">Show Graph</button>
         </form>
       </div>
 
