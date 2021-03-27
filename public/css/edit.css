@@ -1,0 +1,394 @@
+.name h6 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: x-large;
+}
+
+.fixed-top {
+    z-index: 1030;
+    left: 0;
+    right: 0;
+}
+
+.profile-page .page-header {
+    height: 220px;
+    background-position: center;
+}
+
+.page-header {
+    height: 100vh;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-filter:after, .header-filter:before {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    content: "";
+}
+
+.header-filter::before {
+    background-image: -moz-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+    background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+    background-image: -ms-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+    background-size: 200% 100% !important;
+    -webkit-animation: move 10s ease infinite;
+    animation: move 10s ease infinite;
+    transform: translate3d(0, 0, 0);
+}
+
+.main-raised {
+    margin: -60px 30px 0;
+    border-radius: 6px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
+}
+
+.main {
+    background: #FFF;
+    position: relative;
+    z-index: 3;
+}
+
+.profile-page .profile {
+    text-align: center;
+}
+
+.profile-page .profile img {
+    max-width: 160px;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-transform: translate3d(0, -50%, 0);
+    -moz-transform: translate3d(0, -50%, 0);
+    -o-transform: translate3d(0, -50%, 0);
+    -ms-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+}
+
+.img-raised {
+    box-shadow: 0 5px 15px -8px rgba(0, 0, 0, .24), 0 8px 10px -5px rgba(0, 0, 0, .2);
+}
+
+.rounded-circle {
+    border-radius: 50%!important;
+}
+
+.img-fluid, .img-thumbnail {
+    max-width: 100%;
+    height: auto;
+}
+
+.title {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    min-height: 32px;
+    color: #3C4858;
+    font-weight: 700;
+    font-family: "Roboto Slab", "Times New Roman", serif;
+}
+
+.profile-page .description {
+    margin: 1.071rem auto 0;
+    max-width: 600px;
+    font-weight: 300;
+}
+
+.profile-page .profile-tabs {
+    margin-top: 4.284rem;
+}
+
+.tab-space {
+    padding: 20px 0 50px;
+}
+
+.profile-page .gallery {
+    margin-top: 3.213rem;
+    padding-bottom: 50px;
+}
+
+.profile-page .gallery img {
+    width: 100%;
+    margin-bottom: 2.142rem;
+}
+
+.profile-page .profile .name {
+    margin-top: -80px;
+}
+
+img.rounded {
+    border-radius: 6px!important;
+}
+
+.tab-content>.active {
+    display: block;
+}
+
+/*buttons*/
+
+.btn {
+    position: relative;
+    padding: 12px 30px;
+    margin: .3125rem 1px;
+    font-size: .75rem;
+    font-weight: 400;
+    line-height: 1.428571;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    border: 0;
+    border-radius: .2rem;
+    outline: 0;
+    transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1);
+    will-change: box-shadow, transform;
+}
+
+.btn.btn-just-icon {
+    font-size: 20px;
+    height: 41px;
+    min-width: 41px;
+    width: 41px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    line-height: 41px;
+}
+
+.btn.btn-just-icon fa {
+    margin-top: 0;
+    position: absolute;
+    width: 100%;
+    transform: none;
+    left: 0;
+    top: 0;
+    height: 100%;
+    line-height: 41px;
+    font-size: 20px;
+}
+
+.btn.btn-link {
+    background-color: transparent;
+    color: #999;
+}
+
+body {
+    background-image: -moz-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+    background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+    background-image: -ms-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+    background-size: 200% 100%;
+    -webkit-animation: move 10s ease infinite;
+    animation: move 10s ease infinite;
+    transform: translate3d(0, 0, 0);
+}
+
+#footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 30px;
+    width: 100%;
+    background: #999;
+}
+.control-label{
+    font-weight: bold;
+}
+.panel-close{
+    cursor: pointer;
+}
+.input-group-btn{
+    border: 1px solid #e2e8f0;
+}
+.eyebtn{
+    margin: 0;
+    border-bottom-width: 0px;
+    border-top-width: 0px;
+}
+
+footer {
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgb(35, 37, 38);
+    color: white;
+    margin-top: 0px;
+    padding-top: 10pt;
+    padding-bottom: 0px;
+    text-align: center;
+  }
+  dl, ol, ul {
+    margin-top: 0px;
+    margin-bottom: 1rem;
+  }
+  .list-unstyled {
+    padding-left: 0px;
+    list-style-position: initial;
+    list-style-image: initial;
+    list-style-type: none;
+  }
+  .mt-4, .my-4 {
+    margin-top: 1.5rem;
+  }
+  ol, ul {
+    list-style-position: initial;
+    list-style-image: initial;
+    list-style-type: none;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+  .flex {
+    display: flex;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .mt-4 {
+    margin-top: 1rem;
+  }
+  .contact-text {
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+  }
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .h4, h4 {
+    font-size: 1.5rem;
+  }
+  p {
+    margin-top: 0px;
+    margin-bottom: 1rem;
+  }
+  blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+  .social li {
+    display: inline-block;
+  }
+  .social li a {
+    width: 35px;
+    height: 35px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    margin-top: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    line-height: 1.5em;
+    text-decoration-line: none;
+    text-decoration-thickness: initial;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+    color: black;
+  }
+  .fa-2x {
+    font-size: 2em;
+  }
+  .icon:hover {
+    transform: scale(1.2);
+    transition-duration: 0.2s;
+  }
+  .social .fa-envelope:hover {
+    box-shadow: rgba(219, 68, 55, 0.4) 0px 0px 2px 4px;
+  }
+  a {
+    color: inherit;
+    text-decoration-line: inherit;
+    text-decoration-thickness: inherit;
+    text-decoration-style: inherit;
+    text-decoration-color: inherit;
+    background-color: transparent;
+  }
+  a:hover {
+    color: rgb(0, 86, 179);
+    text-decoration-line: underline;
+    text-decoration-thickness: initial;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+  }
+  a:not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration-line: none;
+    text-decoration-thickness: initial;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+  }
+  a:not([href]):not([tabindex]):focus {
+    outline-color: initial;
+    outline-style: initial;
+    outline-width: 0px;
+  }
+  .fa, .fab, .fad, .fal, .far, .fas {
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    text-rendering: auto;
+    line-height: 1;
+  }
+  .fa-envelope::before {
+    content: "";
+  }
+  .fa, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+  }
+  .fa, .fas {
+    font-weight: 900;
+  }
+  .text-copyright {
+    background-color: rgb(33, 35, 38);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 2px 3px;
+  }
+  .m-0 {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+  .pb-2, .py-2 {
+    padding-bottom: 0.5rem;
+  }
+  .pb-2 {
+    padding-bottom: 0.5rem;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
