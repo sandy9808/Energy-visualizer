@@ -5,24 +5,20 @@
 }
 
 body {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  /* font-size: 14px; */
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    /* font-size: 14px; */
   background-size: 200% 100% !important;
   -webkit-animation: move 10s ease infinite;
           animation: move 10s ease infinite;
   transform: translate3d(0, 0, 0);
-  background-image: -moz-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
-  background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
-  background-image: -ms-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+  background: linear-gradient(45deg, #49D49D 10%, #A2C7E5 90%);
   height: 100vh;
 }
+
 .user {
   width: 90%;
   max-width: 340px;
   margin: 10vh auto;
-}
-h1{
-  font-size: 14px;
 }
 
 .user__header {
@@ -60,7 +56,7 @@ input[type="date"]:before {
     content: "";
   }
 
-  input[type="time"]:before {
+input[type="time"]:before {
       content: attr(placeholder) !important;
       color: #aaa;
       margin-right: 0.5em;
@@ -69,6 +65,17 @@ input[type="date"]:before {
     input[type="time"]:valid:before {
       content: "";
     }
+input[type="number"]:before {
+        content: attr(placeholder) !important;
+        color: #aaa;
+        margin-right: 0.5em;
+      }
+      input[type="number"]:focus:before,
+      input[type="number"]:valid:before {
+        content: "";
+      }
+
+
 
 .form--no {
   -webkit-animation: NO 1s ease-in-out;
@@ -172,6 +179,12 @@ input[type="date"]:before {
     background-position: 0 0;
   }
 }
+@media only screen and (min-width: 575px) {
+  .container-fluid{
+    height: 72vh;
+  }
+}
+
 footer {
   left: 0px;
   bottom: 0px;
