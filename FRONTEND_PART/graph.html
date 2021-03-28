@@ -14,7 +14,7 @@
   <link rel="manifest" href="./images/site.webmanifest">
   <link rel="stylesheet" type="text/css" href="./css/main.css" />
   <link rel="stylesheet" type="text/css" href="./css/graph.css">
-  
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="css/tailwind.min.css" rel="stylesheet">
@@ -62,26 +62,26 @@
 
             <form class="form">
               <div class="form__group">
-                <input type="date" placeholder="Start Date :" type="text" onfocus="(this.type='date')"
+                <input type="date" placeholder="Start Date :" type="text" oninvalid="alert('You must fill out the Start Date!');" onfocus="(this.type='date')"
                   onblur="(this.type='text')" class="form__input" onfocus="(this.type='date')" required />
               </div>
 
               <div class="form__group">
-                <input type="time" placeholder="Start Time :" type="text" onfocus="(this.type='time')"
+                <input type="time" placeholder="Start Time :" type="text" oninvalid="alert('You must fill out the Start Time!');" onfocus="(this.type='time')"
                   onblur="(this.type='text')" class="form__input" required />
               </div>
 
               <div class="form__group">
-                <input type="date" placeholder="End Date :" type="text" onfocus="(this.type='date')"
+                <input type="date" placeholder="End Date :" type="text" oninvalid="alert('You must fill out the End Date!');" onfocus="(this.type='date')"
                   onblur="(this.type='text')" class="form__input" required />
               </div>
 
               <div class="form__group">
-                <input type="time" placeholder="End Time :" type="text" onfocus="(this.type='time')"
+                <input type="time" placeholder="End Time :" type="text" oninvalid="alert('You must fill out the End Time!');" onfocus="(this.type='time')"
                   onblur="(this.type='text')" class="form__input" required />
               </div>
               <div class="form__group">
-                <input type="number" placeholder="Cost per Watt :" type="text" onfocus="(this.type='number')" onblur="(this.type='text')" defaultValue="0" class="form__input" required />
+                <input type="number" placeholder="Cost per Watt :" type="text" oninvalid="alert('You must fill out the Cost per Watt!');" onfocus="(this.type='number')" onblur="(this.type='text')" defaultValue="0" class="form__input" required />
               </div>
 
               <button class="button" type="button">Show Graph</button>

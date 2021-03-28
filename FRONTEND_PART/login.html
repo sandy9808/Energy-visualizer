@@ -57,13 +57,13 @@
         <form action="" method="post">
 
           <div class="panel-group">
-            <input class="input" type="text" required>
+            <input class="input" type="text" oninvalid="alert('You must fill out the Username!');" required>
             <span class="border"></span>
             <label>Username</label>
           </div>
 
           <div class="panel-group">
-            <input class="input" type="password" required>
+            <input class="input" type="password" oninvalid="alert('You must fill out the Password!');" required>
             <span class="border"></span>
             <label>Password</label>
           </div>
