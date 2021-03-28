@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Energy Visualizer |Chart</title>
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+  <link rel="manifest" href="./images/site.webmanifest">
+  <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  <link rel="stylesheet" type="text/css" href="./css/chart.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="./css/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b90adf908b.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style>
+    html,
+    body,
+    #myChart {
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body class="font-serif">
+  <header class="header-area" style="background-image:url('./images/bg-01.jpg'); background-size:cover; background-repeat:no-repeat">
+    <!-- site-navbar start -->
+    <div class="navbar-area bg-blue-200 bg-transparent">
+      <div class="containernav">
+        <nav class="site-navbar">
+          <!-- site logo -->
+          <a href="#home" class="site-logo">
+            <img src="./images/logo.png" alt="">
+          </a>
+
+          <!-- site menu/nav -->
+          <ul>
+            <!-- <li><a href="#">Login</a></li> -->
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Graph</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Log out</a></li>
+          </ul>
+
+          <!-- nav-toggler for mobile version only -->
+          <button class="nav-toggler">
+            <span></span>
+          </button>
+        </nav>
+      </div>
+    </div><!-- navbar-area end -->
+
+    <!-- <div class="intro-area flex flex-col justify-center"> -->
+
+
+
+    <!-- </div> -->
+
+    <!--<div class="chart-container flex flex-col justify-center">
+        <canvas id="myChart" width="100" height="100"></canvas>
+
+       <script>
+       var ctx = document.getElementById('myChart');
+          ctx.height=30;
+
+       var myChart = new Chart(ctx, {
+           type: 'bar',
+           data: {
+             labels: [1,2,3,4,5,6,7,8],
+       datasets: [
+           {
+               label: "Energy Consumption",
+               backgroundColor: "rgba(255,99,132,0.2)",
+               borderColor: "rgba(255,99,132,1)",
+               borderWidth: 2,
+               hoverBackgroundColor: "rgba(255,99,132,0.4)",
+               hoverBorderColor: "rgba(255,99,132,1)",
+               data: [1,2,3,4,5,6,7,8],
+           }
+       ]}
+       });
+
+       </script>
+
+       <h3>Total Energy consumed = 2345</h3>
+        <br>
+        <h3>Minimum Usage = 123</h3>
+        <br>
+        <h3>Maximum Usage = 2</h3>
+  </div>-->
+  <div id='myChart'></div>
+  <script>
+  zingchart.render({
+    id: 'myChart',
+    data: {
+      theme: 'light',
+
+      type: 'bar3d',
+      series: [
+        { values: [54,23,34,23,43] }
+      ]
+    }
+  });
+</script>
+  </header>
+
+  <footer id="footer">
+    <div class="footer">
+      <ul class="social list-unstyled mt-4 flex justify-center">
+        <div class="contact-text h4">
+          <p><em>Contact Us At:</em></p>
+        </div>
+        <li>
+          <a href="mailto:dummy@gmail.com" target="_blank" class="fa fa-2x fa-envelope icon"></a>
+        </li>
+      </ul>
+      <div class="text-copyright">
+        <p class="m-0 pb-2">
+          © Copyright <strong>Energy Visualizer</strong> | 2021
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script>
+
+    //Navbar code
+
+    // define all UI variable
+    const navToggler = document.querySelector('.nav-toggler');
+    const navMenu = document.querySelector('.site-navbar ul');
+    const navLinks = document.querySelectorAll('.site-navbar a');
+
+    // load all event listners
+    allEventListners();
+
+    // functions of all event listners
+    function allEventListners() {
+      // toggler icon click event
+      navToggler.addEventListener('click', togglerClick);
+      // nav links click event
+      navLinks.forEach(elem => elem.addEventListener('click', navLinkClick));
+    }
+
+    // togglerClick function
+    function togglerClick() {
+      navToggler.classList.toggle('toggler-open');
+      navMenu.classList.toggle('open');
+    }
+
+    // navLinkClick function
+    function navLinkClick() {
+      if (navMenu.classList.contains('open')) {
+        navToggler.click();
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,304 @@
+/* default css start */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .containernav {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .header-area {
+    background-image: -moz-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+    background-image: -webkit-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+    background-image: -ms-linear-gradient(0deg, #766dff 0%, #88f3ff 100%);
+    background-size: 200% 100% !important;
+  -webkit-animation: move 10s ease infinite;
+          animation: move 10s ease infinite;
+  transform: translate3d(0, 0, 0);
+  }
+  @-webkit-keyframes NO {
+    from, to {
+      transform: translate3d(0, 0, 0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translate3d(-10px, 0, 0);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translate3d(10px, 0, 0);
+    }
+  }
+
+  @keyframes NO {
+    from, to {
+      transform: translate3d(0, 0, 0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translate3d(-10px, 0, 0);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translate3d(10px, 0, 0);
+    }
+  }
+  @-webkit-keyframes arrive {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 50px, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @keyframes arrive {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 50px, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @-webkit-keyframes move {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  @keyframes move {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  /* default css end */
+
+
+  /* navbar regular css start */
+  .navbar-area {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .site-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  a.site-logo {
+    font-size: 26px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+  }
+  .site-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  .site-navbar ul li a {
+    color: #fff;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .site-navbar ul li a:hover {
+    background: rgba(255,255,255,.1);
+  }
+  /* navbar regular css end */
+
+
+  /* nav-toggler css start */
+  .nav-toggler {
+    border: 3px solid #fff;
+    padding: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    height: 39px;
+    display: none;
+  }
+  .nav-toggler span,
+  .nav-toggler span:before,
+  .nav-toggler span:after {
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    transition: .3s;
+  }
+  .nav-toggler span:before {
+    content: '';
+    transform: translateY(-9px);
+  }
+  .nav-toggler span:after {
+    content: '';
+    transform: translateY(6px);
+  }
+  .nav-toggler.toggler-open span {
+    background-color: transparent;
+  }
+  .nav-toggler.toggler-open span:before {
+    transform: translateY(0px) rotate(45deg);
+  }
+  .nav-toggler.toggler-open span:after {
+    transform: translateY(-3px) rotate(-45deg);
+  }
+  /* nav-toggler css start */
+
+
+  /* intro-area css start */
+  .intro-area {
+    height: calc(100vh - 61px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+  .intro-area h2 {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 50px;
+    margin-bottom: 25px;
+  }
+  .intro-area p {
+    font-size: 23px;
+  }
+  /* intro-area css end */
+
+
+  /* mobile breakpoint start */
+  @media screen and (max-width: 767px) {
+    .containernav {
+      max-width: 720px;
+    }
+    /* navbar css for mobile start */
+    .nav-toggler{
+      display: block;
+    }
+    .site-navbar {
+      min-height: 60px;
+    }
+    .site-navbar ul {
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 60px);
+      left: 0;
+      top: 60px;
+      flex-direction: column;
+      align-items: center;
+      border-top: 1px solid #444;
+      background-color: rgba(0,0,0,.75);
+      max-height: 0;
+      overflow: hidden;
+      transition: .3s;
+    }
+    .site-navbar ul li {
+      width: 100%;
+      text-align: center;
+    }
+    .site-navbar ul li a {
+      padding: 25px;
+    }
+    .site-navbar ul li a:hover {
+      background-color: rgba(255,255,255,.1);
+    }
+    .site-navbar ul.open {
+      max-height: 100vh;
+      overflow: visible;
+      z-index: 1090;
+    }
+    .intro-area h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+    /* navbar css for mobile end */
+  }
+  /* mobile breakpoint end */
+
+
+  /* Footer section ! */
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap');
+  .footer {
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #232526;
+      color: white;
+      margin-top: 0px;
+      padding-top: 10pt;
+      padding-bottom: 0;
+      text-align: center;
+    }
+    .contact-text{
+        padding: 15px;
+    }
+    .social li {
+      display: inline-block;
+    }
+
+    .social li a {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      margin: 0.5em;
+      background: #fff;
+      color: black !important;
+      position: center;
+      display: block;
+      line-height: 1.5em;
+      text-decoration: none;
+    }
+
+    .fa-2x {
+      font-size: 1.5em !important;
+    }
+
+    .icon:hover {
+      transform: scale(1.2);
+      transition-duration: 0.2s;
+    }
+
+    .social .fa-facebook:hover {
+      box-shadow: 0 0 2px 4px rgba(65, 103, 178, 0.4);
+    }
+
+    .social .fa-twitter:hover {
+      box-shadow: 0 0 2px 4px rgba(29, 161, 242, 0.4);
+    }
+    .social .fa-linkedin:hover {
+      box-shadow: 0 0 2px 4px rgba(40, 103, 178, 0.4);
+    }
+    .social .fa-github:hover {
+      box-shadow: 0 0 2px 4px rgba(127, 71, 201, 0.4);
+    }
+    .social .fa-envelope:hover {
+      box-shadow: 0 0 2px 4px rgba(219, 68, 55, 0.4);
+    }
+
+    .text-copyright {
+      background-color: #212326;
+      box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    @media screen and (max-width: 450px) {
+      .text-copyright {
+        display: block;
+        font-size: small;
+      }
+    }
+
+    /* Footer Section Ends */

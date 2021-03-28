@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+body {
+  background: #616161;
+  color: #fafafa;
+  font-family: "Poppins", Helvetica, Arial, Sans-Serif;
+  text-align: center;
+}
+
+a {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  color: #03a9f4;
+  text-decoration: none;
+}
+a:hover {
+  color: #4fc3f7;
+  font-weight: bold;
+}
+
+.panel {
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.65);
+  color: #212121;
+  height: 300px;
+  left: 0;
+  margin: 0 auto 150px !important;
+  overflow: hidden;
+  padding-top: 30px !important;
+  position: relative;
+  right: 0;
+  top: 50px;
+  width: 400px;
+  z-index: 200;
+}
+.panel button {
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  background: #b3e5fc;
+  border: 0;
+  border-radius: 6px;
+  color: #212121;
+  cursor: pointer;
+  display: block;
+  font-size: 1.5em;
+  font-weight: 300;
+  margin: 20px auto !important;
+  padding: 10px  !important;
+  width: 330px;
+}
+.panel button:active {
+  background: #03a9f4;
+  color: #212121;
+}
+.panel button:hover {
+  -webkit-transition: all 0.55s;
+  transition: all 0.55s;
+  background: #4fc3f7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+  color: #fff;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.65);
+}
+.panel:hover {
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  border-radius: 35px 35px 35px 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.65);
+}
+
+.panel-group {
+  margin-bottom: 35px !important;
+  margin-left: 40px !important;
+  position: relative;
+}
+
+.input {
+  border: 0;
+  border-bottom: 1px solid #212121;
+  display: block;
+  font-size: 1em;
+  padding: 10px 10px 10px 5px  !important;
+  width: 300px;
+}
+.input:focus {
+  outline: 0;
+}
+
+label {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: #999;
+  font-size: 14px;
+  font-weight: normal;
+  left: 5px;
+  pointer-events: none;
+  position: absolute;
+  top: 10px;
+}
+
+.input:focus ~ label,
+.input:valid ~ label {
+  color: #4fc3f7;
+  font-size: 0.75em;
+  font-weight: bold;
+  top: -15px;
+}
+
+.border {
+  display: block;
+  position: relative;
+  width: 315px;
+}
+
+.border::before,
+.border::after {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background: #03a9f4;
+  bottom: 1px;
+  content: "";
+  height: 2px;
+  position: absolute;
+  width: 0;
+}
+
+.border::before {
+  left: 50%;
+}
+
+.border::after {
+  right: 50%;
+}
+
+.input:focus ~ .border::before,
+.input:focus ~ .border::after {
+  width: 50%;
+}
+
+@media (max-width: 420px) {
+    .panel {
+        width: 90vw;
+    }
+    input{
+    }
+    button[type="submit"]{
+        width: 100px;
+    }
+  }
