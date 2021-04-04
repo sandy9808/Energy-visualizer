@@ -6,16 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Energy Visualizer |Home</title>
+  <title>View Raw Data</title>
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon-96x96.png">
-
   <link rel="manifest" href="./images/site.webmanifest">
   <link rel="stylesheet" type="text/css" href="./css/main.css" />
-  <link rel="stylesheet" type="text/css" href="./css/home.css">
+  <link rel="stylesheet" type="text/css" href="./css/update.css">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -24,7 +22,7 @@
 </head>
 
 <body class="font-serif">
-  <header style="background-image:url('./images/bg-01.jpg'); background-size:cover; background-repeat:no-repeat">
+  <header class="header-area">
     <!-- site-navbar start -->
     <div class="navbar-area bg-blue-200 bg-transparent">
       <div class="containernav">
@@ -43,6 +41,7 @@
             <li><a href="#">Log out</a></li>
           </ul>
 
+
           <!-- nav-toggler for mobile version only -->
           <button class="nav-toggler">
             <span></span>
@@ -51,35 +50,30 @@
       </div>
     </div><!-- navbar-area end -->
 
-    <div class="intro-area flex flex-col justify-center">
-      <!-- <div>
-        <p class="slogan"><span>Save Electricity</span></p>
-      </div> -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 col-md-6 flex flex-col justify-center">
+          <img src="./images/3Dcharts.png" style="max-width:100%; max-height:100%;">
+        </div>
+        <div class="col-sm-6 col-md-6">
+          <div class="user">
+            <header class="user__header">
+              <h1 class="user__title">Select Date & time to View Data.</h1>
+            </header>
+            <form class="form">
+              <div class="form__group">
+                <input type="date" placeholder="Date :" type="text" oninvalid="alert('You must fill out the Date!');" name="Date" onfocus="(this.type='date')" onblur="(this.type='text')" class="form__input" required />
+              </div>
 
-      <!-- <div class="containerheader">
-        <p>Save <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
-      </div>
-      <div class="text-2xl">
-      Energy Visualizer is an energy management system which displays the graphical view of the electricity readings.
-      </div> -->
+              <div class="form__group">
+                <input type="time" placeholder="Time :" type="text" oninvalid="alert('You must fill out the Time!');" name="Time" onfocus="(this.type='time')" onblur="(this.type='text')" class="form__input" required />
+              </div>
 
-      <div class="container-fluid">
-        <div class="row ">
-          <div class="col flex flex-col justify-center" >
-            <div class="box1">
-              <p>Energy Visualizer</p><p>is an energy management system</p>  <p>which displays the graphical view</p> <p>of the electricity readings.</p>
-              <br>
-            </div>
-
-            <button class="btn btn-primary btn-lg active">Visualize now</button>
+              <button class="button" type="button">View Data</button>
+            </form>
           </div>
-          <div class="col flex flex-col justify-center">
-            <img src="./images/hiclipart.com.png">
-          </div>
-
         </div>
       </div>
-
     </div>
   </header>
 
