@@ -11,25 +11,27 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon-96x96.png">
+
   <link rel="manifest" href="./images/site.webmanifest">
-  <link rel="stylesheet" type="text/css" href="./public/css/main.css"/>
-  <link rel="stylesheet" type="text/css" href="./public/css/home.css">
+  <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  <link rel="stylesheet" type="text/css" href="./css/home.css">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link href="./public/css/tailwind.min.css" rel="stylesheet">
+  <link href="./css/tailwind.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/b90adf908b.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="font-serif">
-  <header style="background-image:url('./public/images/bg-01.jpg'); background-size:cover; background-repeat:no-repeat">
+  <header style="background-image:url('./images/bg-01.jpg'); background-size:cover; background-repeat:no-repeat">
     <!-- site-navbar start -->
     <div class="navbar-area bg-blue-200 bg-transparent">
       <div class="containernav">
         <nav class="site-navbar">
           <!-- site logo -->
           <a href="#home" class="site-logo">
-            <img src="./public/images/1616916292952.png" alt="">
+            <img src="./images/logo.png" alt="">
           </a>
 
           <!-- site menu/nav -->
@@ -63,16 +65,18 @@
 
       <div class="container-fluid">
         <div class="row ">
+          <div class="col flex flex-col justify-center" >
+            <div class="box1">
+              <p>Energy Visualizer</p><p>is an energy management system</p>  <p>which displays the graphical view</p> <p>of the electricity readings.</p>
+              <br>
+            </div>
 
-          <div class="col flex flex-col justify-center">
-            <br><br>
-            <p>Energy Visualizer</p><p>An energy management system</p>  <p>which displays the graphical view</p> <p>of the electricity readings.</p>
-            <br>
             <button class="btn btn-primary btn-lg active">Visualize now</button>
           </div>
           <div class="col flex flex-col justify-center">
-            <img src="./public/images/hiclipart.com.png">
+            <img src="./images/hiclipart.com.png">
           </div>
+
         </div>
       </div>
 
@@ -127,48 +131,6 @@
         navToggler.click();
       }
     }
-
-    const typedTextSpan = document.querySelector(".typed-text");
-const cursorSpan = document.querySelector(".cursor");
-
-const textArray = ["electricity", "trees", "money", "time"];
-const typingDelay = 200;
-const erasingDelay = 100;
-const newTextDelay = 2000; // Delay between current and next text
-let textArrayIndex = 0;
-let charIndex = 0;
-
-function type() {
-  if (charIndex < textArray[textArrayIndex].length) {
-    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(type, typingDelay);
-  }
-  else {
-    cursorSpan.classList.remove("typing");
-    setTimeout(erase, newTextDelay);
-  }
-}
-
-function erase() {
-  if (charIndex > 0) {
-    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-    charIndex--;
-    setTimeout(erase, erasingDelay);
-  }
-  else {
-    cursorSpan.classList.remove("typing");
-    textArrayIndex++;
-    if(textArrayIndex>=textArray.length) textArrayIndex=0;
-    setTimeout(type, typingDelay + 1100);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-  if(textArray.length) setTimeout(type, newTextDelay + 250);
-});
   </script>
 </body>
 

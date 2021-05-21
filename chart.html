@@ -6,31 +6,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Chart</title>
+  <title>Energy Visualizer |Chart</title>
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
   <link rel="manifest" href="./images/site.webmanifest">
-  <link rel="stylesheet" type="text/css" href="./public/css/main.css"/>
-  <link rel="stylesheet" type="text/css" href="./public/css/chart.css">
+  <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  <link rel="stylesheet" type="text/css" href="./css/chart.css">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link href="./public/css/tailwind.min.css" rel="stylesheet">
+  <link href="./css/tailwind.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/b90adf908b.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style>
+    html,
+    body,
+    #myChart {
+      height: 100%;
+      width: 100%;
+    }
+  </style>
 </head>
 
-<body class="font-serif" style="background-color:#cce6ff">
-  <header class="header-area">
+<body class="font-serif">
+  <header class="header-area" style="background-image:url('./images/bg-01.jpg'); background-size:cover; background-repeat:no-repeat">
     <!-- site-navbar start -->
-   <div class="navbar-area bg-blue-200 bg-transparent">
+    <div class="navbar-area bg-blue-200 bg-transparent">
       <div class="containernav">
         <nav class="site-navbar">
           <!-- site logo -->
           <a href="#home" class="site-logo">
-            <img src="/images/logo.png" alt="">
+            <img src="./images/logo.png" alt="">
           </a>
 
           <!-- site menu/nav -->
@@ -39,6 +48,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">Graph</a></li>
             <li><a href="#">Profile</a></li>
+            <li><a href="#">Log out</a></li>
           </ul>
 
           <!-- nav-toggler for mobile version only -->
@@ -55,7 +65,7 @@
 
     <!-- </div> -->
 
-    <div class="chart-container flex flex-col justify-center">
+    <!--<div class="chart-container flex flex-col justify-center">
         <canvas id="myChart" width="100" height="100"></canvas>
 
        <script>
@@ -69,11 +79,11 @@
        datasets: [
            {
                label: "Energy Consumption",
-               backgroundColor: "#cce6ff",
-               borderColor: "#00134d",
+               backgroundColor: "rgba(255,99,132,0.2)",
+               borderColor: "rgba(255,99,132,1)",
                borderWidth: 2,
-               hoverBackgroundColor: "#1a53ff",
-               hoverBorderColor: "#00134d",
+               hoverBackgroundColor: "rgba(255,99,132,0.4)",
+               hoverBorderColor: "rgba(255,99,132,1)",
                data: [1,2,3,4,5,6,7,8],
            }
        ]}
@@ -86,7 +96,32 @@
         <h3>Minimum Usage = 123</h3>
         <br>
         <h3>Maximum Usage = 2</h3>
-  </div> 
+  </div>-->
+  <div id='myChart'></div>
+  <script>
+  zingchart.render({
+    id: 'myChart',
+    data: {
+      theme: 'light',
+
+      type: 'bar3d',
+      series: [
+        { values: [54,23,34,23,43] }
+      ]
+    }
+  });
+</script>
+<br>
+<b>
+<h3>Total Energy consumed = 2345</h3>
+ <br>
+ <h3>Minimum Usage = 123</h3>
+ <br>
+ <h3>Maximum Usage = 2</h3>
+ <br>
+ <h3>Total Cost= 2345</h3>
+</b>
+ <br />
   </header>
 
   <footer id="footer">
@@ -107,6 +142,7 @@
     </div>
   </footer>
   <script>
+
     //Navbar code
 
     // define all UI variable

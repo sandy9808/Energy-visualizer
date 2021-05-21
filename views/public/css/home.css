@@ -1,7 +1,12 @@
- /* Home page code starts */ 
+ /* Home page code starts */
 
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.box1 p{
+  font-size: 3vw;
+}
+
 
 
 .containerheader {
@@ -38,5 +43,13 @@ animation: none;
 99% { background-color: transparent; }
 100%  { background-color: #ccc; }
 }
-
+.container{
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.welcometext{
+  text-align: center;
+}
 /* Home page Code ends */

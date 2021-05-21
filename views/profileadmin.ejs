@@ -1,0 +1,171 @@
+<% if(message.length > 0){ %>
+  <div class="alert alert-info alert-dismissable">
+      <a class="panel-close close" data-dismiss="alert">×</a>
+      <i class="fa fa-coffee"></i>
+      <strong><%= message %></strong>
+  </div>
+<% } %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/profile.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="/css/tailwind.min.css" type="text/css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b90adf908b.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="profile-page">
+    <!-- site-navbar start -->
+    <div class="navbar-area bg-blue-200 bg-transparent fixed-top">
+        <div class="containernav">
+            <nav class="site-navbar">
+                <!-- site logo -->
+                <a href="http://localhost:3000/home/<%=username%>" class="site-logo">
+                    <img src="/images/logo.png" alt="">
+                </a>
+
+                <!-- site menu/nav -->
+                <ul>
+                    <!-- <li><a href="#">Login</a></li> -->
+                    <li><a href="http://localhost:3000/home/<%=username%>">Home</a></li>
+                    <li><a href="http://localhost:3000/view/<%=username%>">Graph</a></li>
+                    <li><a href="http://localhost:3000/profile/<%=username%>">Profile</a></li>
+                    <li><a href="http://localhost:3000/RawView/<%=username%>">Raw View</a></li>
+                    <li><a href="http://localhost:3000/Update/<%=username%>">Raw Update</a></li>
+
+                    <li><a href="http://localhost:3000">Log out</a></li>
+                </ul>
+
+                <!-- nav-toggler for mobile version only -->
+                <button class="nav-toggler">
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </div><!-- navbar-area end -->
+
+    <div class="page-header header-filter" data-parallax="true"
+        style="background-image:url('http://wallpapere.org/wp-content/uploads/2012/02/black-and-white-city-night.png');">
+    </div>
+    <div class="main main-raised">
+        <div class="profile-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 ml-auto mr-auto">
+                        <div class="profile">
+                            <div class="avatar">
+                                <img src="/images/profile-pic.png" alt="Circle Image"
+                                    class="img-raised rounded-circle img-fluid">
+                            </div>
+                            <div class="name">
+                                <h3 class="title"><%= first %> <%= last %></h3>
+                                <h6>Admin</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="overflow-x:auto;">
+                    <table class="table table-hover">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Username</th>
+                                <td><%= username %></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Email</th>
+                                <td><%= email %></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Contact Number</th>
+                                <td><%= contact %></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Address</th>
+                                <td><%= address %></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Date Of Birth(MM/DD/YYYY)</th>
+                                <td><%= DOB %></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="flex flex-row justify-center">
+                    <a href="http://localhost:3000/editprofile/<%=username%>" class="btn btn-info" role="button">Edit Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="footer">
+            <ul class="social list-unstyled mt-4 flex justify-center">
+                <div class="contact-text h4">
+                    <p><em>Contact Us At:</em></p>
+                </div>
+                <li>
+                    <a href="mailto:dummy@gmail.com" target="_blank" class="fa fa-2x fa-envelope icon"></a>
+                </li>
+            </ul>
+            <div class="text-copyright">
+                <p class="m-0 pb-2">
+                    © Copyright <strong>Energy Visualizer</strong> | 2021
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        //Navbar code
+
+        // define all UI variable
+        const navToggler = document.querySelector('.nav-toggler');
+        const navMenu = document.querySelector('.site-navbar ul');
+        const navLinks = document.querySelectorAll('.site-navbar a');
+
+        // load all event listners
+        allEventListners();
+
+        // functions of all event listners
+        function allEventListners() {
+            // toggler icon click event
+            navToggler.addEventListener('click', togglerClick);
+            // nav links click event
+            navLinks.forEach(elem => elem.addEventListener('click', navLinkClick));
+        }
+
+        // togglerClick function
+        function togglerClick() {
+            navToggler.classList.toggle('toggler-open');
+            navMenu.classList.toggle('open');
+        }
+
+        // navLinkClick function
+        function navLinkClick() {
+            if (navMenu.classList.contains('open')) {
+                navToggler.click();
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,3 +1,12 @@
+<% if(message.length > 0){ %>
+  <div class="alert alert-info alert-dismissable">
+      <a class="panel-close close" data-dismiss="alert">×</a>
+      <i class="fa fa-coffee"></i>
+      <strong><%= message %></strong>
+  </div>
+<% } %>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,13 +16,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Energy Visualizer |Home</title>
-  <link rel="shortcut icon" href="/images/favicon.ico" type="/image/x-icon">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+
   <link rel="manifest" href="/images/site.webmanifest">
-  <link rel="stylesheet" type="text/css" href="/css/main.css"/>
-  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/css/home.css">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -22,7 +33,7 @@
 </head>
 
 <body class="font-serif">
-  <header style="background-color: #5B21B6;">
+  <header style="background-image:url('/images/bg-01.jpg'); background-size:cover; background-repeat:no-repeat">
     <!-- site-navbar start -->
     <div class="navbar-area bg-blue-200 bg-transparent">
       <div class="containernav">
@@ -49,33 +60,21 @@
       </div>
     </div><!-- navbar-area end -->
 
-    <div class="intro-area flex flex-col justify-center">
-      <!-- <div>
-        <p class="slogan"><span>Save Electricity</span></p>
-      </div> -->
-
-      <!-- <div class="containerheader">
-        <p>Save <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
-      </div>
-      <div class="text-2xl">
-      Energy Visualizer is an energy management system which displays the graphical view of the electricity readings.
-      </div> -->
-
-      <div class="container-fluid">
-        <div class="row ">
-          <div class="col flex flex-col justify-center">
-            <img src="/images/ssssss.jpg" height="500px;">
-          </div>
-          <div class="col flex flex-col justify-center">
-            <br><br>
-            <p>Energy Visualizer</p><p>An energy management system</p>  <p>which helps to Visualize</p> <p>the energy consumption.</p>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 flex flex-col justify-center">
+            <div class="welcometext text-2xl">Energy Visualizer is an energy management system which displays the graphical view of your electricity readings.</div>
             <br>
-            <button type="submit" class="btn btn-dark btn-lg"><a href="http://localhost:3000/view/<%=username%>">Visualize now</a></button>
+            <button class="btn btn-primary btn-lg active">
+            <li><a href="http://localhost:3000/view/<%=username%>">Visualize now</a></li>
+            </button>
+          </div>
+          <div class="col-sm-6 col-md-6 flex flex-col justify-center">
+            <img src="/images/hiclipart.com.png" style="max-width:100%; max-height:100%;">
           </div>
         </div>
-      </div>
-
     </div>
+
   </header>
 
   <footer id="footer">
@@ -126,48 +125,6 @@
         navToggler.click();
       }
     }
-
-    const typedTextSpan = document.querySelector(".typed-text");
-const cursorSpan = document.querySelector(".cursor");
-
-const textArray = ["electricity", "trees", "money", "time"];
-const typingDelay = 200;
-const erasingDelay = 100;
-const newTextDelay = 2000; // Delay between current and next text
-let textArrayIndex = 0;
-let charIndex = 0;
-
-function type() {
-  if (charIndex < textArray[textArrayIndex].length) {
-    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(type, typingDelay);
-  }
-  else {
-    cursorSpan.classList.remove("typing");
-    setTimeout(erase, newTextDelay);
-  }
-}
-
-function erase() {
-  if (charIndex > 0) {
-    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-    charIndex--;
-    setTimeout(erase, erasingDelay);
-  }
-  else {
-    cursorSpan.classList.remove("typing");
-    textArrayIndex++;
-    if(textArrayIndex>=textArray.length) textArrayIndex=0;
-    setTimeout(type, typingDelay + 1100);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-  if(textArray.length) setTimeout(type, newTextDelay + 250);
-});
   </script>
 </body>
 
